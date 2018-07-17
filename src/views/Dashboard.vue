@@ -1,15 +1,14 @@
 <template>
-  <div>Home Page</div>
+  <div>Dashboard Page</div>
 </template>
 
 <script>
 export default {
-  name: 'home',
+  name: 'Dashboard',
   components: {
   },
 };
 </script>
 
-<style lang="scss" scoped>
+<style scoped lang="scss">
 </style>
-
