@@ -10,7 +10,9 @@
         </router-link>
       </v-flex>
       <v-flex xs6 sm2 class="text-xs-center">
-        <h1 class="grey--text">logo</h1>
+        <router-link to="/">
+          <h1 class="grey--text">logo</h1>
+        </router-link>
       </v-flex>
       <v-flex sm2 class="hidden-sm-and-down">
         <v-layout row justify-content-end>
