@@ -1,15 +1,15 @@
 <template>
-  <v-toolbar class="elevation-1 px-5" color="white">
+  <v-toolbar class="elevation-1 px-2" color="white">
     <v-layout row align-center justify-space-between>
-      <v-flex xs6 sm2>
+      <v-flex xs6 sm1>
         <router-link to="/dashboard">
-          <v-layout row>
+          <v-layout row class="dashboard-link">
             <v-icon small color="grey">dashboard</v-icon>
             <span class="ml-3">Dashboard</span>
           </v-layout>
         </router-link>
       </v-flex>
-      <v-flex xs6 sm2 class="text-xs-center">
+      <v-flex xs6 sm2 offset-sm1 class="text-xs-center">
         <router-link to="/">
           <h1 class="grey--text">logo</h1>
         </router-link>
@@ -50,23 +50,26 @@ export default {
 
 <style scoped lang="scss">
   $default-color: #9e9e9e;
-  $active-color: #40C4FF;
+  $active-color: #2196F3;
+  $active-bc-color: #E1F5FE;
+  .dashboard-link {
+    width: 120px;
+    padding: 5px;
+    border-radius: 2px;
+  }
   h1 {
     font-weight: 900;
     font-size: 28px;
   }
   a {
     color: $default-color;
-    span {
-      border-bottom: 2px solid transparent;
-    }
   }
   .router-link-exact-active {
-    i, span {
-      color: $active-color !important;
-    }
-    span {
-      border-bottom: 2px solid $active-color;
+    .dashboard-link{
+      background-color: $active-bc-color;
+      i, span {
+        color: $active-color !important;
+      }
     }
   }
   .user-avatar {
