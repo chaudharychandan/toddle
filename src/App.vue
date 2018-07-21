@@ -9,7 +9,7 @@
 import Header from '@/components/Header.vue';
 
 export default {
-  name: 'header',
+  name: 'ToddleApp',
   components: {
     'app-header': Header,
   },
