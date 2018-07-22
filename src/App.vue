@@ -23,9 +23,10 @@ export default {
 
 <style lang="scss">
 @import './assets/style/variables.scss';
+@import './assets/style/app.scss';
 
 html, body {
-  height: 100%;
+  min-height: 100%;
   box-sizing: border-box;
   a {
     text-decoration: none;
