@@ -1,7 +1,11 @@
 <template>
   <v-layout column>
     <v-layout row justify-space-between align-center pb-5>
-      <h3>UX Methods</h3>
+      <base-headline
+        title="UX Methods"
+        size="md"
+      >
+      </base-headline>
       <div>
         <base-select
           v-bind:list="selections"

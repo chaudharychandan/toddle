@@ -9,7 +9,7 @@
           </v-layout>
         </router-link>
       </v-flex>
-      <v-flex xs6 sm2 offset-sm1 class="text-xs-center">
+      <v-flex xs6 sm2 offset-sm1 class="text-xs-right text-md-center">
         <router-link to="/">
           <h1 class="grey--text">logo</h1>
         </router-link>

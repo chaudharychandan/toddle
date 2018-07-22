@@ -1,7 +1,11 @@
 <template>
   <v-layout column>
     <v-layout row justify-space-between align-center>
-      <h3>Your Projects</h3>
+      <base-headline
+        title="Your Projects"
+        size="md"
+      >
+      </base-headline>
       <div>
         <v-layout row align-center>
           <v-flex>
@@ -12,7 +16,7 @@
             >
             </base-select>
           </v-flex>
-          <v-flex>
+          <v-flex hidden-sm-and-down>
             <v-btn color="primary">
               <v-icon left dark>add</v-icon>
               Start New Project

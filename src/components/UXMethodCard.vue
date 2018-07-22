@@ -11,7 +11,7 @@
     <v-spacer></v-spacer>
     <v-card-actions>
       <v-spacer></v-spacer>
-      <v-btn flat small>
+      <v-btn flat small v-bind:ripple="false">
         Use this <v-icon right>arrow_right_alt</v-icon>
       </v-btn>
       <v-spacer></v-spacer>
