@@ -17,7 +17,7 @@
     </v-layout>
     <v-container fluid align-center grid-list-lg pa-0>
       <v-layout row wrap>
-        <v-flex sm3 v-for="item in filterMethods" v-bind:key="item.id">
+        <v-flex xl2 lg3 md4 sm6 xs12 v-for="item in filterMethods" v-bind:key="item.id">
           <ux-method-card v-bind:method="item"></ux-method-card>
         </v-flex>
       </v-layout>

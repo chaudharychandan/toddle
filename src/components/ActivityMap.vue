@@ -10,8 +10,7 @@
       >
       </base-headline>
     </v-layout>
-    <v-divider class="my-2"></v-divider>
-    <activities v-bind:items="activities"></activities>
+    <activities v-bind:items="activities" class="my-2"></activities>
   </v-flex>
 </template>
 

@@ -28,7 +28,7 @@
     <v-divider class="my-4"></v-divider>
     <v-container fluid align-center grid-list-lg pa-0>
       <v-layout row wrap>
-        <v-flex md3 sm4 xs12 v-for="item in filterProjects" v-bind:key="item.id">
+        <v-flex xl2 lg3 md4 sm6 xs12 v-for="item in filterProjects" v-bind:key="item.id">
           <project-card v-bind:project="item"></project-card>
         </v-flex>
       </v-layout>
@@ -63,11 +63,11 @@ export default {
           value: 0,
         },
         {
-          label: 'Inactive',
+          label: 'Active',
           value: 1,
         },
         {
-          label: 'Active',
+          label: 'Archived',
           value: 2,
         },
       ],
