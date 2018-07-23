@@ -6,18 +6,10 @@
         size="md"
       >
       </base-headline>
-      <div>
-        <base-select
-          v-bind:list="selections"
-          v-bind:default="selected"
-          v-on:change="selectType"
-        >
-        </base-select>
-      </div>
     </v-layout>
     <v-container fluid align-center grid-list-lg pa-0>
       <v-layout row wrap>
-        <v-flex xl2 lg3 md4 sm6 xs12 v-for="item in filterMethods" v-bind:key="item.id">
+        <v-flex xl2 lg3 sm4 xs12 v-for="item in items" v-bind:key="item.id">
           <ux-method-card v-bind:method="item"></ux-method-card>
         </v-flex>
       </v-layout>
@@ -37,35 +29,6 @@ export default {
     items: {
       type: Array,
       required: true,
-    },
-  },
-  methods: {
-    selectType(type) {
-      this.selected = type;
-    },
-  },
-  data() {
-    return {
-      selections: [
-        {
-          label: 'All',
-          value: 0,
-        },
-        {
-          label: 'New',
-          value: 1,
-        },
-        {
-          label: 'Popular',
-          value: 2,
-        },
-      ],
-      selected: 2,
-    };
-  },
-  computed: {
-    filterMethods() {
-      return this.selected ? this.items.filter(item => item.type === this.selected) : this.items;
     },
   },
 };

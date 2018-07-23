@@ -1,6 +1,7 @@
 <template>
   <v-app id="app">
     <app-header />
+    <v-divider class="p-header-height"></v-divider>
     <router-view/>
   </v-app>
 </template>
@@ -17,24 +18,21 @@ export default {
 </script>
 
 <style lang="styl">
-@import './assets/style/stylus/main.styl';
+@import './assets/styles/stylus/main.styl';
 @import '~vuetify/src/stylus/main.styl';
 </style>
 
 <style lang="scss">
-@import './assets/style/variables.scss';
-@import './assets/style/app.scss';
+@import './assets/styles/app.scss';
+</style>
 
-html, body {
-  min-height: 100%;
-  box-sizing: border-box;
-  a {
-    text-decoration: none;
-  }
-}
+<style lang="scss" scoped>
+@import './assets/styles/_vars.scss';
 #app {
   height: 100%;
   background-color: $app-background-color;
+  .p-header-height {
+    padding-top: 64px;
+  }
 }
 </style>
-

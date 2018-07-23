@@ -1,5 +1,5 @@
 <template>
-  <v-toolbar class="elevation-1 px-2" color="white">
+  <v-toolbar class="elevation-1 px-2" color="white" fixed>
     <v-layout row align-center justify-space-between>
       <v-flex xs6 sm1>
         <router-link to="/dashboard">

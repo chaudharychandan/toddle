@@ -1,0 +1,13 @@
+html, body {
+  min-height: 100%;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+button.v-btn {
+  text-transform: capitalize;
+  font-weight: 600;
+}

@@ -1,8 +1,9 @@
 <template>
   <v-container fluid fill-height class="dashboard">
     <v-layout
-      v-bind:class="{'mx-5': $vuetify.breakpoint.mdAndUp}"
+      v-bind:class="{'mx-5': $vuetify.breakpoint.mdAndUp, 'mx-2': $vuetify.breakpoint.mdAndDown}"
       fill-height
+      justify-space-between
     >
       <v-flex  xs12 md8 fill-height>
         <v-layout column fill-height>
@@ -10,32 +11,34 @@
             title="Welcome Juan Ho!"
             description="Lorem ipsum dolor sit amet, consectetur adipiscing"
             size="lg"
+            height="85"
           >
           </base-headline>
           <v-flex
             class="white py-4 elevation-1"
             v-bind:class="{
               'px-5': $vuetify.breakpoint.mdAndUp,
-              'px-2': $vuetify.breakpoint.mdAndDown
+              'px-3': $vuetify.breakpoint.mdAndDown
             }"
           >
             <projects v-bind:items="projects"></projects>
             <v-divider class="my-5"></v-divider>
             <ux-methods v-bind:items="uxMethods"></ux-methods>
+            <v-divider class="my-5"></v-divider>
+            <ux-methods v-bind:items="uxMethods"></ux-methods>
           </v-flex>
         </v-layout>
       </v-flex>
-      <v-flex md4 fill-height class="pl-4" hidden-sm-and-down>
-        <v-layout column fill-height>
-          <base-headline
-            title="Activity Map"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing"
-            size="lg"
-          >
-          </base-headline>
-          <activity-map v-bind:activities="activities"></activity-map>
-        </v-layout>
-      </v-flex>
+      <v-layout column class="activity-map" hidden-sm-and-down>
+        <base-headline
+          title="Activity Map"
+          description="Lorem ipsum dolor sit amet, consectetur adipiscing"
+          size="lg"
+          height="85"
+        >
+        </base-headline>
+        <activity-map v-bind:activities="activities"></activity-map>
+      </v-layout>
     </v-layout>
   </v-container>
 </template>
@@ -243,4 +246,12 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.activity-map {
+  position: fixed;
+  width: 28%;
+  right: 72px;
+  height: auto;
+  top: 88px;
+  bottom: 24px;
+}
 </style>

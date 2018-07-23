@@ -1,12 +1,12 @@
 <template>
-  <v-layout column px-3>
+  <div class="px-3">
     <activity-log
       v-for="item in sortActivities"
       v-bind:key="item.id"
       v-bind:activity="item"
     >
     </activity-log>
-  </v-layout>
+  </div>
 </template>
 
 <script>
@@ -25,7 +25,7 @@ export default {
   },
   computed: {
     sortActivities() {
-      return [...this.items].sort((item1, item2) => item1.timestamp - item2.timestamp);
+      return Array.from(this.items).sort((item1, item2) => item1.timestamp - item2.timestamp);
     },
   },
 };
