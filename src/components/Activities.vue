@@ -1,5 +1,5 @@
 <template>
-  <div class="px-3">
+  <div class="mx-1 px-3">
     <activity-log
       v-for="item in sortActivities"
       v-bind:key="item.id"

@@ -1,5 +1,8 @@
 <template>
-  <div v-bind:class="{'pb-4': size === 'lg'}" class="t-headline" v-bind:style="{height : height + 'px'}">
+  <div
+    v-bind:class="{'pb-4': size === 'lg'}"
+    class="t-headline"
+    v-bind:style="{height : height + 'px'}">
     <h2 v-if="size === 'lg'" class="headline mb-2">{{ title }}</h2>
     <h3 v-else-if="size === 'md'" class="title mb-2">{{ title }}</h3>
     <h4 v-else-if="size === 'sm'" class="subheading mb-2">{{ title }}</h4>

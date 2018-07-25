@@ -6,13 +6,13 @@
         title="Your Activity"
         description="Catch the recap of your activities and road maphere along with time stamp"
         size="md"
-        class="ml-2 mb-2"
+        class="ml-3 mb-2"
         height="70"
       >
       </base-headline>
     </v-layout>
     <v-divider></v-divider>
-    <activities v-bind:items="activities" class="activities-container"></activities>
+    <activities v-bind:items="activities" class="activities-container my-3"></activities>
   </v-flex>
 </template>
 
@@ -36,6 +36,6 @@ export default {
 <style scoped lang="scss">
 .activities-container {
   overflow: scroll;
-  height: calc(100vh - 300px);
+  height: calc(100vh - 332px);
 }
 </style>
