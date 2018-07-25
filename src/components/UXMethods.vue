@@ -10,7 +10,7 @@
     <v-container fluid align-center grid-list-lg pa-0>
       <v-layout row wrap>
         <v-flex xl2 lg3 sm4 xs12 v-for="item in items" v-bind:key="item.id">
-          <ux-method-card v-bind:method="item"></ux-method-card>
+          <base-card v-bind:actions="actions" v-bind:card="item"></base-card>
         </v-flex>
       </v-layout>
     </v-container>
@@ -18,17 +18,34 @@
 </template>
 
 <script>
-import UXMethodCard from '@/components/UXMethodCard.vue';
 
 export default {
   name: 'UXMethods',
   components: {
-    'ux-method-card': UXMethodCard,
   },
   props: {
     items: {
       type: Array,
       required: true,
+      default: () => [],
+    },
+  },
+  data() {
+    return {
+      actions: [
+        {
+          label: 'Use this',
+          icon: 'arrow_right_alt',
+          callback: (method) => {
+            this.use(method);
+          },
+        },
+      ],
+    };
+  },
+  methods: {
+    use(method) {
+      console.log(method);
     },
   },
 };
