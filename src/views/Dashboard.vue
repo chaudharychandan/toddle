@@ -5,7 +5,10 @@
       fill-height
       justify-space-between
     >
-      <v-flex  xs12 md8 fill-height>
+      <v-flex
+        xs12 md9 fill-height
+        v-bind:class="{'pr-5': $vuetify.breakpoint.mdAndUp}"
+      >
         <v-layout column fill-height>
           <base-headline
             title="Welcome Juan Ho!"
@@ -248,10 +251,10 @@ export default {
 <style scoped lang="scss">
 .activity-map {
   position: fixed;
-  width: 28%;
+  width: 25%;
   right: 72px;
   height: auto;
-  top: 88px;
+  top: 89px;
   bottom: 24px;
 }
 </style>

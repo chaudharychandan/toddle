@@ -36,6 +36,6 @@ export default {
 <style scoped lang="scss">
 .activities-container {
   overflow: scroll;
-  height: calc(100vh - 332px);
+  height: calc(100vh - 333px);
 }
 </style>
