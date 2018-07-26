@@ -15,7 +15,9 @@
             v-bind:actions="actions"
             v-bind:card="item"
             color="#6EA7B8"
-            text-color="white">
+            title-text-color="white"
+            description-text-color="white"
+          >
           </base-card>
         </v-flex>
       </v-layout>

@@ -11,33 +11,41 @@
       >
         <v-layout column fill-height>
           <v-flex
-            class="white py-4 elevation-1"
-            v-bind:class="{
+            class="white pb-4 elevation-1"
+          >
+            <v-layout
+              row justify-space-between align-center
+              v-bind:class="{
+                'px-5 py-2': $vuetify.breakpoint.mdAndUp,
+                'px-3 py-3': $vuetify.breakpoint.mdAndDown
+              }"
+            >
+              <base-headline
+                title="Google Reactor Project"
+                size="md"
+              >
+              </base-headline>
+              <div>
+                <v-btn color="primary hidden-sm-and-down">
+                  <v-icon left dark>add</v-icon>
+                  Use a Template
+                </v-btn>
+              </div>
+            </v-layout>
+            <v-divider class="mb-4"></v-divider>
+            <div v-bind:class="{
               'px-5': $vuetify.breakpoint.mdAndUp,
               'px-3': $vuetify.breakpoint.mdAndDown
-            }"
-          >
-          <v-layout row justify-space-between align-start>
-            <base-headline
-              title="Google Reactor Project"
-              size="lg"
-            >
-            </base-headline>
-            <div>
-              <v-btn color="primary">
-                <v-icon left dark>add</v-icon>
-                Use a Template
-              </v-btn>
+            }">
+              <discovery-phase v-bind:items="discoveryPhaseSteps"></discovery-phase>
+              <v-divider class="my-5"></v-divider>
+              <insights-discovery-phase v-bind:items="insightsDiscoveryPhaseSteps"></insights-discovery-phase>
             </div>
-          </v-layout>
-          <v-divider class="mb-4"></v-divider>
-          <discovery-phase v-bind:items="discoveryPhaseSteps"></discovery-phase>
-          <v-divider class="my-5"></v-divider>
-          <insights-discovery-phase v-bind:items="insightsDiscoveryPhaseSteps"></insights-discovery-phase>
           </v-flex>
         </v-layout>
       </v-flex>
       <v-layout column class="ux-process" hidden-sm-and-down>
+        <ux-process></ux-process>
       </v-layout>
     </v-layout>
   </v-container>
@@ -46,13 +54,15 @@
 <script>
 import DiscoveryPhase from '@/components/DiscoveryPhase.vue';
 import InsightsDiscoveryPhase from '@/components/InsightsDiscoveryPhase.vue';
+import UXProcess from '@/components/UXProcess';
 
 export default {
   name: 'Project',
   components: {
     'discovery-phase': DiscoveryPhase,
-    'insights-discovery-phase': InsightsDiscoveryPhase
-,  },
+    'insights-discovery-phase': InsightsDiscoveryPhase,
+    'ux-process': UXProcess,
+  },
   data() {
     return {
       discoveryPhaseSteps: [
