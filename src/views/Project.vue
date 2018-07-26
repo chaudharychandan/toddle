@@ -45,7 +45,7 @@
         </v-layout>
       </v-flex>
       <v-layout column class="ux-process" hidden-sm-and-down>
-        <ux-process></ux-process>
+        <ux-process v-bind:steps="uxProcessSteps"></ux-process>
       </v-layout>
     </v-layout>
   </v-container>
@@ -92,6 +92,64 @@ export default {
           id: 1,
           title: 'Problem Statements',
           description: 'Winning solutions help customers get a job done better and/or more cheaply',
+        },
+      ],
+      uxProcessSteps: [
+        {
+          id: 1,
+          title: 'Discovery Phase',
+          description: 'Problem Statements, Personas, Consumer Journey Maps, Empathy Maps',
+          insights: false,
+          covered: true,
+        },
+        {
+          id: 2,
+          title: 'Insights: Discovery Phase',
+          description: 'Problem Statements, Personas, Consumer Journey Maps, Empathy Maps',
+          insights: true,
+          covered: true,
+        },
+        {
+          id: 3,
+          title: 'Interpretation Phase',
+          description: 'Problem Statements, Personas, Consumer Journey Maps, Empathy Maps',
+          insights: false,
+          covered: false,
+        },
+        {
+          id: 4,
+          title: 'Insights: Interpretation Phase',
+          description: 'Problem Statements, Personas, Consumer Journey Maps, Empathy Maps',
+          insights: true,
+          covered: false,
+        },
+        {
+          id: 5,
+          title: 'Ideation/Strategy Phase',
+          description: 'Problem Statements, Personas, Consumer Journey Maps, Empathy Maps',
+          insights: false,
+          covered: false,
+        },
+        {
+          id: 6,
+          title: 'Insights: Ideation/Strategy Phase',
+          description: 'Problem Statements, Personas, Consumer Journey Maps, Empathy Maps',
+          insights: true,
+          covered: false,
+        },
+        {
+          id: 7,
+          title: 'Experimentation Phase',
+          description: 'Problem Statements, Personas, Consumer Journey Maps, Empathy Maps',
+          insights: false,
+          covered: false,
+        },
+        {
+          id: 8,
+          title: 'Insights: Experimentation Phase',
+          description: 'Problem Statements, Personas, Consumer Journey Maps, Empathy Maps',
+          insights: true,
+          covered: false,
         },
       ],
     };

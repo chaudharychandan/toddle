@@ -12,17 +12,27 @@
         </v-btn>
       </div>
     </v-layout>
-    <v-divider></v-divider>
+    <v-layout column>
+      <div v-for="step in steps" v-bind:key="step.id">
+        <v-divider></v-divider>
+        <ux-process-step v-bind:step="step">
+        </ux-process-step>
+      </div>
+    </v-layout>
   </v-flex>
 </template>
 
 <script>
+import UXProcessStep from '@/components/UXProcessStep.vue';
 
 export default {
   name: 'UXProcess',
   components: {
+    'ux-process-step': UXProcessStep,
   },
   props: {
+    steps: Array,
+    required: true,
   },
 };
 </script>
