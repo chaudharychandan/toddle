@@ -29,7 +29,9 @@
     <v-container fluid align-center grid-list-lg pa-0>
       <v-layout row wrap>
         <v-flex xl2 lg3 sm4 xs12 v-for="item in filterProjects" v-bind:key="item.id">
-          <project-card v-bind:project="item"></project-card>
+          <router-link :to="{ name: 'project', params: { name: item.title }}">
+            <project-card v-bind:project="item"></project-card>
+          </router-link>
         </v-flex>
       </v-layout>
     </v-container>

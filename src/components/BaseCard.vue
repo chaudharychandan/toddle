@@ -1,10 +1,12 @@
 <template>
   <v-card>
-    <v-card-title primary-title>
+    <v-card-title primary-title v-bind:style="{ 'background-color': color}">
+      <v-icon left dark class="pb-2">assignment</v-icon>
       <base-headline
         v-bind:title="card.title"
         v-bind:description="card.description"
-        class="pb-5"
+        class="pb-4"
+        v-bind:color="textColor"
       >
       </base-headline>
     </v-card-title>
@@ -37,6 +39,8 @@ export default {
       required: false,
       default: () => [],
     },
+    color: String,
+    textColor: String,
   },
 };
 </script>

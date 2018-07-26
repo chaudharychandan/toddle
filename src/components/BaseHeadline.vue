@@ -2,13 +2,17 @@
   <div
     v-bind:class="{'pb-4': size === 'lg'}"
     class="t-headline"
-    v-bind:style="{height : height + 'px'}">
+    v-bind:style="{color: color, height : height + 'px'}">
     <h2 v-if="size === 'lg'" class="headline mb-2">{{ title }}</h2>
     <h3 v-else-if="size === 'md'" class="title mb-2">{{ title }}</h3>
     <h4 v-else-if="size === 'sm'" class="subheading mb-2">{{ title }}</h4>
     <h5 v-else-if="size === 'xs'" class="body-2 mb-2">{{ title }}</h5>
     <h4 v-else class="subheading mb-2">{{ title }}</h4>
-    <span class="grey--text">{{ description }}</span>
+    <div class="grey--text">
+      <span v-bind:style="{ color: color }">
+        {{ description }}
+      </span>
+    </div>
   </div>
 </template>
 
@@ -23,6 +27,7 @@ export default {
     size: String,
     description: String,
     height: String || Number,
+    color: String,
   },
 };
 </script>
