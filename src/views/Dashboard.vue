@@ -28,7 +28,7 @@
             <v-divider class="my-5"></v-divider>
             <ux-methods v-bind:items="uxMethods"></ux-methods>
             <v-divider class="my-5"></v-divider>
-            <ux-methods v-bind:items="uxMethods"></ux-methods>
+            <templates v-bind:items="templates"></templates>
           </v-flex>
         </v-layout>
       </v-flex>
@@ -50,6 +50,7 @@
 import ActivityMap from '@/components/ActivityMap.vue';
 import Projects from '@/components/Projects.vue';
 import UXMethods from '@/components/UXMethods.vue';
+import Templates from '@/components/Templates.vue';
 
 export default {
   name: 'Dashboard',
@@ -57,6 +58,7 @@ export default {
     'activity-map': ActivityMap,
     projects: Projects,
     'ux-methods': UXMethods,
+    'templates': Templates,
   },
   data() {
     return {
@@ -222,25 +224,43 @@ export default {
           id: 1,
           title: 'Jobs To Be Done',
           description: 'Winning solutions help customers get a job done better and/or more cheaply',
-          type: 1,
         },
         {
           id: 2,
           title: 'Design Sprints',
           description: 'Winning solutions help customers get a job done better and/or more cheaply',
-          type: 2,
         },
         {
           id: 3,
           title: 'Qualitative',
           description: 'Winning solutions help customers get a job done better and/or more cheaply',
-          type: 2,
         },
         {
           id: 4,
           title: 'Quantitative',
           description: 'Winning solutions help customers get a job done better and/or more cheaply',
-          type: 2,
+        },
+      ],
+      templates: [
+        {
+          id: 1,
+          title: 'User Jouney Map',
+          description: 'Winning solutions help customers get a job done better and/or more cheaply',
+        },
+        {
+          id: 2,
+          title: 'Research Requirements',
+          description: 'Winning solutions help customers get a job done better and/or more cheaply',
+        },
+        {
+          id: 3,
+          title: 'Personas',
+          description: 'Winning solutions help customers get a job done better and/or more cheaply',
+        },
+        {
+          id: 4,
+          title: 'Flow Maps',
+          description: 'Winning solutions help customers get a job done better and/or more cheaply',
         },
       ],
     };
